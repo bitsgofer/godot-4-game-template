@@ -13,6 +13,12 @@ release-web:
 	${GODOT} --headless --export-release "web" releases/web/index.html
 .PHONY: release-web
 
+run-web:
+	cd tools/webserver && \
+		go build -o webserver ./...
+	./tools/webserver/webserver --contentDir=releases/web
+.PHONY: run-web
+
 release-linux: releases
 release-linux:
 	mkdir -p releases/linux
