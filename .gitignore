@@ -6,3 +6,6 @@ assets/
 
 # Releases
 releases/
+
+# Tools
+/tools/webserver/webserver
